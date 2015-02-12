@@ -90,17 +90,6 @@ app.get('/uploads/thumbs/:file', function (req, res){
 
 });
 
-
-	var Render3DView = Backbone.View.extend({
-		template: JST['app/scripts/templates/Render3D.ejs'],
-
-		initialize: function(){
-
-		},
-
-		cameraView: function(){
-			var MyThree = Three.Camera();
-		}
 	});
 
 	return Render3D;
