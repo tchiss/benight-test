@@ -20,7 +20,8 @@ define(function(require, exports, module){
             'news':'news',
             'events': 'eventsfeed',
             'event/:id': 'editEvent',
-            'contact': 'contact'
+            'contact': 'contact',
+            'login': 'login'
         },
         home: function() {
             var partyevents = new PartyEventsCollection();
@@ -42,7 +43,10 @@ define(function(require, exports, module){
             console.log('hello events');
         },
         editEvent: function(){},
-        contact: function(){}
+        contact: function(){},
+        login: function(){
+            console.log('yo login');
+        }
     });
     //return AppRouter;
 });
