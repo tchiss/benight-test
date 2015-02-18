@@ -11,7 +11,7 @@ define(function(require, exports, module){
     var LoginView = require('views/Login');
 
     //Parse.initialize("KB0XBMX06SVCiUnSUKKgA52v2pee75nSGexrh0wT", "d5Pye5IKCldho2Vtjdyw0PM7ySaSDX4pxOR2atNM");
-    module.exports = Parse.Router.extend({
+    var AppRouter = Parse.Router.extend({
         initialize: function(){
             console.log('initialized router');
         },
@@ -24,7 +24,7 @@ define(function(require, exports, module){
             'login': 'login'
         },
         home: function() {
-            var partyevents = new PartyEventsCollection();
+/*            var partyevents = new PartyEventsCollection();
 
             partyevents.fetch({
                 success: function(data) {
@@ -36,7 +36,8 @@ define(function(require, exports, module){
                 error: function(error)      {
                     console.log(error.message);
                 }
-            });
+            });*/
+        console.log('hello main');
         },
         news: function(){},
         eventsfeed: function(){
@@ -44,9 +45,11 @@ define(function(require, exports, module){
         },
         editEvent: function(){},
         contact: function(){},
-        login: function(){
-            console.log('yo login');
+        login: function() {
+
+            var loginView = new LoginView();
+            console.log('Hello login');
         }
     });
-    //return AppRouter;
+    return AppRouter;
 });
